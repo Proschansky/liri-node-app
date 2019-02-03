@@ -1,11 +1,16 @@
+require("dotenv").config();
 var keys = require("./keys.js"); // Grab data from keys.js
 var fs = require("fs"); // node package for reading and writing files
 var request = require("request"); // node package for making http requests
 var Spotify = require("node-spotify-api"); // node package that handles Spotify requests
+var axios = require('axios');
+var https = require('https');
+var inquirer = require('inquirer');
 //Prompts for command line syntax
 var command = process.argv[2];
-var term = process.argv[3];
+var term = process.argv.slice(3);
 var defaultSong = 'I want it that way'
+var defaultBand = 'Maroon 5'
 
 switch (command) {
 
@@ -15,7 +20,11 @@ switch (command) {
 
 	case "movie-this":
 		movieThis(term);
-		break;
+        break;
+    
+    case "concert-this":
+        concertThis(term);
+        break;
 
 	case "do-what-it-says":
 		doWhatItSays();
@@ -69,7 +78,8 @@ function spotifyThisSong(term) {
 				}
 			});
 		}
-		console.log("\n===== log.txt was updated with Music info! =====");
+        console.log("\n===== log.txt was updated with Music info! =====");
+    
 	});
 } //End Spotify Exercise
 
@@ -92,7 +102,8 @@ function doWhatItSays() {
 					break;
 			}
 		}
-	});
+    });
+
 } //End Do What it Says Exercise
 
 // OMDB Movie Exercise
@@ -110,7 +121,7 @@ function movieThis(term) {
 		if (!error && response.statusCode === 200) {
             var movieData = JSON.parse(body);
 			// Show the following on the console and log file:
-			// * Title of the movie.
+			// * Movie Title.
 			// * Year the movie came out.
 			// * IMDB Rating of the movie.
 			// * Rotten Tomatoes Rating of the movie.
@@ -125,7 +136,8 @@ function movieThis(term) {
 							"* The movie was produced in: " + movieData.Country +
 							"* The movie's Language is: " + movieData.Language +
 							"* The movie's Plot is: " + movieData.Plot +
-							"* The movie's Actors include: " + movieData.Actors;			
+                            "* The movie's Actors include: " + movieData.Actors;
+                            			
 			var dataArr = movieInfo.split("*");			
 			for (i=0; i < dataArr.length; i++) {				
 				console.log(dataArr[i].trim());
@@ -143,6 +155,25 @@ function movieThis(term) {
 	  	else {
 	       console.log(error);
 	  	}
-	});
+    });
+
 } //End OMDB Movie Exercise
+
+//Can't seem to get this to work with this API key.
+function concertThis(term) {
+    if (!term){
+        term = defaultBand
+    }
+
+    else 
+    console.log("Requested Artist: " + term);
+    // console.log("key: " + keys.bands.key);
+    var urlQuery = 'https://rest.bandsintown.com/artists/' + term + '/events?app_id=codingbootcamp'
+
+    axios.get(urlQuery).then(function (response) {
+        console.log(response);
+         
+})
+};
+
 
