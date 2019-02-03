@@ -158,3 +158,45 @@ The movie's Language is: English
 The movie's Rotten Tomatoes Rating is: 21%
 The movie's Plot is: On holiday in the English countryside, two young couples uncover an ancient evil.
 The movie's Actors include: Emily Plumtree, Sam Stockman, Jessica Ellerby, Matt Stokoe
+
+Artist(s): Post Malone
+Album Name: Stoney (Deluxe)
+Track Title: Go Flex
+Preview Link: https://open.spotify.com/track/5yuShbu70mtHXY0yLzCQLQ
+
+Artist(s): Post Malone
+Track Title: Go Flex
+Album Name: Stoney (Deluxe)
+Preview Link: https://open.spotify.com/track/5yuShbu70mtHXY0yLzCQLQ
+
+The movie's Release Year is: 1994
+Movie Title: Forrest Gump
+The movie's IMDB Rating is: 8.8/10
+The movie's Rotten Tomatoes Rating is: 72%
+The movie's Language is: English
+The movie's Plot is: The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.
+The movie's Actors include: Tom Hanks, Rebecca Williams, Sally Field, Michael Conner Humphreys
+The movie was produced in: USA
+
+The movie's Release Year is: 1994
+The movie's Rotten Tomatoes Rating is: 72%
+Movie Title: Forrest Gump
+The movie's IMDB Rating is: 8.8/10
+The movie's Plot is: The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.
+The movie was produced in: USA
+The movie's Actors include: Tom Hanks, Rebecca Williams, Sally Field, Michael Conner Humphreys
+The movie's Language is: English
+
+Movie Title: Forrest Gump
+The movie's Release Year is: 1994
+The movie's Rotten Tomatoes Rating is: 72%
+The movie's IMDB Rating is: 8.8/10
+The movie's Language is: English
+The movie's Plot is: The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.
+The movie was produced in: USA
+The movie's Actors include: Tom Hanks, Rebecca Williams, Sally Field, Michael Conner Humphreys
+
+Artist(s): Backstreet Boys
+Album Name: The Hits--Chapter One
+Preview Link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+Track Title: I Want It That Way

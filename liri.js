@@ -5,24 +5,24 @@ var request = require("request"); // node package for making http requests
 var Spotify = require("node-spotify-api"); // node package that handles Spotify requests
 var axios = require('axios');
 var https = require('https');
-var inquirer = require('inquirer');
+
 //Prompts for command line syntax
 var command = process.argv[2];
 var term = process.argv.slice(3);
-var defaultSong = 'I want it that way'
+var defaultSong = 'Real Slim Shady'
 var defaultBand = 'Maroon 5'
 
 switch (command) {
 
-	case "spotify-this-song":
+	case "spotify":
 		spotifyThisSong(term);
 		break;
 
-	case "movie-this":
+	case "movie":
 		movieThis(term);
         break;
     
-    case "concert-this":
+    case "concert":
         concertThis(term);
         break;
 
@@ -31,7 +31,7 @@ switch (command) {
 		break;
 
 	default:
-		console.log("You must pass an command [my-tweets, spotify-this-song, movie-this, do-what-it-says] and a term");
+		console.log("You must pass an command [spotify, movie, do-what-it-says] and a term");
 		console.log("Example node liri.js movie-this Jumanji");
 		break;
 }
@@ -162,15 +162,15 @@ function movieThis(term) {
 //Can't seem to get this to work with this API key.
 function concertThis(term) {
     if (!term){
-        term = defaultBand
+        term = defaultBand;
     }
 
     else 
-    console.log("Requested Artist: " + term);
+    console.log("Requested Artist: " + term.join(' '));
     // console.log("key: " + keys.bands.key);
-    var urlQuery = 'https://rest.bandsintown.com/artists/' + term + '/events?app_id=codingbootcamp'
+    var queryUrl = 'https://rest.bandsintown.com/artists/' + term + '/events?app_id=codingbootcamp'
 
-    axios.get(urlQuery).then(function (response) {
+    axios.get(queryUrl).then(function (response) {
         console.log(response);
          
 })
